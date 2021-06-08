@@ -179,3 +179,17 @@ SearchCityOrState('Mumbai');
 //searching with state
 console.log("searching with state");
 SearchCityOrState('Maharashtra');
+
+function SearchCityOrState(cityOrState){
+    if(contacts.filter((p=>p.city==cityOrState)||(p=>p.state==cityOrState))){
+        console.log(contacts.toString());
+    }
+}
+
+//View By city
+console.log("searching with city");
+SearchCityOrState('Mumbai');
+
+//View By state
+console.log("searching with state");
+SearchCityOrState('Maharashtra');
