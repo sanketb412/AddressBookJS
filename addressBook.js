@@ -156,3 +156,7 @@ function deleteContactByName(firstname){
 }
 console.log("Contact Deleted");
 deleteContactByName('Char');
+
+console.log("Counting The Number of persons in AddressBook");
+let count = contacts.reduce(count => count +=1,0);
+console.log("Number Of persons in adressBook is : " +count);
