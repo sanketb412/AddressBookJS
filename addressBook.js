@@ -193,3 +193,12 @@ SearchCityOrState('Mumbai');
 //View By state
 console.log("searching with state");
 SearchCityOrState('Maharashtra');
+
+function getCountByCity(city) {
+    return contacts.filter(x => x.city == city).reduce((countOfContact, x) => countOfContact += 1, 0);
+}
+function getCountByState(state) {
+    return contacts.filter(x => x.state == state).reduce((countOfContact, x) => countOfContact += 1, 0);
+}
+console.log("No.of contacts present in the city: " + getCountByCity("Mumbai"));
+console.log("No.of contacts present in the state: " + getCountByState("Maharashtra"));
