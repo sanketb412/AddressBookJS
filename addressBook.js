@@ -125,3 +125,23 @@ function AddContacts(firstname,lastname,address,city,state,zip,phoneNumber,email
 AddContacts('Sanket','Bagde','Mulund','Mumbai','Maharashtra','400080','91 996456132','sanketbagde@gmail.com');
 
 console.log(contacts.toString());
+
+function getContactWithName(firstname){
+    for(let i = 0; i < contacts.length; i++){
+        if(contacts[i].firstname == firstname){
+            return i;
+        }
+    }
+    return -1;
+}
+let contactindex=getContactWithName('Sanket');
+if(contactindex!=-0){
+    console.log("Contacts before Updation");
+    console.log(contacts.toString());
+    contacts[contactindex].firstname = 'Vicky';
+    contacts[contactindex].city='Mumbai';
+    console.log("contacts after updation");
+    console.log(contacts.toString());
+}else{
+    console.log("conatct not found");
+}
