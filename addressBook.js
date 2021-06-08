@@ -115,10 +115,15 @@ class Contact{
                 +this.city+",State:"+this.state+",Zip:"+this.zip+",MobileNumber:"+this.phoneNumber+",Email:"
                 +this.email;
     }
+    
 }
 
 let contacts = new Array();
 function AddContacts(firstname,lastname,address,city,state,zip,phoneNumber,email){
+    if(contacts.some(fname=> fname.firstname == firstname)){
+        console.log("Person is already exists");
+        return;
+    }
     let contact=new Contact(firstname,lastname,address,city,state,zip,phoneNumber,email);
     contacts.push(contact);
 }
@@ -160,3 +165,4 @@ deleteContactByName('Char');
 console.log("Counting The Number of persons in AddressBook");
 let count = contacts.reduce(count => count +=1,0);
 console.log("Number Of persons in adressBook is : " +count);
+
