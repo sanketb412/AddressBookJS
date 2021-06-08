@@ -125,4 +125,3 @@ function AddContacts(firstname,lastname,address,city,state,zip,phoneNumber,email
 AddContacts('Sanket','Bagde','Mulund','Mumbai','Maharashtra','400080','91 996456132','sanketbagde@gmail.com');
 
 console.log(contacts.toString());
-
